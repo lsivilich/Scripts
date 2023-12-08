@@ -1,6 +1,6 @@
 # Hash List (Created by using [HashMyFiles](http://www.nirsoft.net/))
 
-## Unzip_7zip.exe
+## One_Button_Extract_7zip
 | Algorithm | Checksum |
 | --- | --- |
 | MD5 | 40411c250c4686410d5455ee137347c9 |
