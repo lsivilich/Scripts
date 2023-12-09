@@ -19,6 +19,9 @@ ClipWait
 filename := A_Clipboard
 ;filename := "C:\file.zip"
 
+filename := StrReplace(filename, "[","`[}")
+filename := StrReplace(filename, "]","`]")
+
 ;find the position of the dot before the file extension in the path
 FoundPos:= Instr(filename,".",0,StrLen(filename)-5,1)
 
