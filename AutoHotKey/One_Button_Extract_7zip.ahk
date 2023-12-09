@@ -19,21 +19,16 @@ ClipWait
 filename := A_Clipboard
 ;filename := "C:\file.zip"
 
-filename := StrReplace(filename, "[","`[}")
-filename := StrReplace(filename, "]","`]")
-
 ;find the position of the dot before the file extension in the path
 FoundPos:= Instr(filename,".",0,StrLen(filename)-5,1)
 
 filepath := SubStr(filename,1,FoundPos-1)
+filepath .= "`""
+
 args := " x "
-args .= "`""
 args .= filename
-args .= "`""
 args .= " -o"
-args .= "`""
 args .= filepath
-args .= "`""
 Run "C:\Program Files\7-Zip\7z.exe" args
 
 ;ListVars
